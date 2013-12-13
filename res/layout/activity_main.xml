@@ -23,7 +23,7 @@
        android:orientation="horizontal"
        android:layout_gravity="center"
        android:gravity="center"
-       android:paddingTop="20dp">
+       android:paddingTop="30dp">
    
    <Button
        android:id="@+id/buttonSeven"
@@ -138,16 +138,29 @@
        android:paddingTop="20dp">
 
        <Button
+       	android:id="@+id/buttonCE"
+       	android:layout_width="70dp"
+       	android:layout_height="wrap_content"
+       	android:text="@string/operator_CE" 
+       />
+       <Button
            android:id="@+id/buttonZero"
            android:layout_width="70dp"
            android:layout_height="wrap_content"
-           android:text="@string/number_0" />
-
-   <Button
-       android:id="@+id/buttonCE"
-       android:layout_width="70dp"
-       android:layout_height="wrap_content"
-       android:text="@string/operator_CE" />
+           android:text="@string/number_0" 
+       />
+	   <Button
+       	android:id="@+id/buttonEqual"
+       	android:layout_width="70dp"
+       	android:layout_height="wrap_content"
+       	android:text="@string/operator_equal" 
+       />
+       <Button
+        android:id="@+id/buttonPlus"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="@string/operator_plus" 
+       />
 
    </LinearLayout>
    
