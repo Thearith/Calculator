@@ -278,8 +278,7 @@ public class MainActivity extends Activity {
 				try{
 					
 					result = calculate();
-					DecimalFormat decimalFormat = new DecimalFormat("#.#");
-					display.setText("Result: "+ decimalFormat.format(result));
+					display.setText(String.format("Result: %g", result));
 					
 					operand1 = operand2 = 0;
 					operator = OPERATOR.UNINITIALIZED;
@@ -306,7 +305,7 @@ public class MainActivity extends Activity {
 					case DIVIDE:
 						if(operand2 == 0)
 							throw new Exception("Undefined");
-						result = operand1 / operand2;
+						result = (double)operand1 / operand2;
 						break;
 					case UNINITIALIZED:
 						throw new Exception("");
