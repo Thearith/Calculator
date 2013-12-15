@@ -38,6 +38,9 @@ public class MainActivity extends Activity {
 	int operand1 = 0, operand2 = 0;
 	OPERATOR operator;
 	
+	boolean isToClearDisplay = false;
+	boolean isForOperand1 = true;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -78,10 +81,15 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				if(operand1 == 0) {
+				if(isForOperand1) {
 					operand1 = 1;
 				} else {
 					operand2 = 1;
+				}
+				
+				if(isToClearDisplay) {
+					display.setText("");
+					isToClearDisplay = false;
 				}
 				
 				display.append("1 ");
@@ -92,10 +100,15 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				if(operand1 == 0) {
+				if(isForOperand1) {
 					operand1 = 2;
 				} else {
 					operand2 = 2;
+				}
+				
+				if(isToClearDisplay) {
+					display.setText("");
+					isToClearDisplay = false;
 				}
 				
 				display.append("2 ");
@@ -106,10 +119,15 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				if(operand1 == 0) {
+				if(isForOperand1) {
 					operand1 = 3;
 				} else {
 					operand2 = 3;
+				}
+				
+				if(isToClearDisplay) {
+					display.setText("");
+					isToClearDisplay = false;
 				}
 				
 				display.append("3 ");
@@ -120,10 +138,15 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				if(operand1 == 0) {
+				if(isForOperand1) {
 					operand1 = 4;
 				} else {
 					operand2 = 4;
+				}
+				
+				if(isToClearDisplay) {
+					display.setText("");
+					isToClearDisplay = false;
 				}
 				
 				display.append("4 ");
@@ -134,10 +157,15 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				if(operand1 == 0) {
+				if(isForOperand1) {
 					operand1 = 5;
 				} else {
 					operand2 = 5;
+				}
+				
+				if(isToClearDisplay) {
+					display.setText("");
+					isToClearDisplay = false;
 				}
 				
 				display.append("5 ");
@@ -148,10 +176,15 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				if(operand1 == 0) {
+				if(isForOperand1) {
 					operand1 = 6;
 				} else {
 					operand2 = 6;
+				}
+				
+				if(isToClearDisplay) {
+					display.setText("");
+					isToClearDisplay = false;
 				}
 				
 				display.append("6 ");
@@ -162,10 +195,15 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				if(operand1 == 0) {
+				if(isForOperand1) {
 					operand1 = 7;
 				} else {
 					operand2 = 7;
+				}
+				
+				if(isToClearDisplay) {
+					display.setText("");
+					isToClearDisplay = false;
 				}
 				
 				display.append("7 ");
@@ -176,10 +214,15 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				if(operand1 == 0) {
+				if(isForOperand1) {
 					operand1 = 8;
 				} else {
 					operand2 = 8;
+				}
+				
+				if(isToClearDisplay) {
+					display.setText("");
+					isToClearDisplay = false;
 				}
 				
 				display.append("8 ");
@@ -190,10 +233,15 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				if(operand1 == 0) {
+				if(isForOperand1) {
 					operand1 = 9;
 				} else {
 					operand2 = 9;
+				}
+				
+				if(isToClearDisplay) {
+					display.setText("");
+					isToClearDisplay = false;
 				}
 				
 				display.append("9 ");
@@ -204,10 +252,15 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				if(operand1 == 0) {
+				if(isForOperand1) {
 					operand1 = 0;
 				} else {
 					operand2 = 0;
+				}
+				
+				if(isToClearDisplay) {
+					display.setText("");
+					isToClearDisplay = false;
 				}
 				
 				display.append("0 ");
@@ -219,6 +272,12 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				operator = OPERATOR.PLUS;
+				isForOperand1 = false;
+				
+				if(isToClearDisplay) {
+					display.setText("");
+					isToClearDisplay = false;
+				}
 				
 				display.append("+ ");
 			}	
@@ -229,6 +288,12 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				operator = OPERATOR.SUBTRACT;
+				isForOperand1 = false;
+				
+				if(isToClearDisplay) {
+					display.setText("");
+					isToClearDisplay = false;
+				}
 				
 				display.append("- ");
 			}	
@@ -239,6 +304,12 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				operator = OPERATOR.MULTIPLY;
+				isForOperand1 = false;
+				
+				if(isToClearDisplay) {
+					display.setText("");
+					isToClearDisplay = false;
+				}
 				
 				display.append("* ");
 			}	
@@ -249,6 +320,12 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				operator = OPERATOR.DIVIDE;
+				isForOperand1 = false;
+				
+				if(isToClearDisplay) {
+					display.setText("");
+					isToClearDisplay = false;
+				}
 				
 				display.append("/ ");
 			}	
@@ -260,6 +337,7 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				operand1 = operand2 = 0;
 				operator = OPERATOR.UNINITIALIZED;
+				isForOperand1 = true;
 				
 				display.setText("");
 			}	
@@ -279,14 +357,17 @@ public class MainActivity extends Activity {
 					
 					result = calculate();
 					display.setText(String.format("Result: %g", result));
-					
-					operand1 = operand2 = 0;
-					operator = OPERATOR.UNINITIALIZED;
-					
+										
 				} catch(Exception e) {
 					
 					display.setText(e.getMessage());
 				} 
+				
+				isToClearDisplay = true;
+				operand1 = operand2 = 0;
+				operator = OPERATOR.UNINITIALIZED;
+				isForOperand1 = true;
+
 			}
 				
 			private double calculate() throws Exception{
